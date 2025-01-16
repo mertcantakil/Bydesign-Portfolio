@@ -13,10 +13,22 @@ const Header = () => {
         <a href="#" style={styles.navLinkLogo}>WELCOME</a>
       </div>
       <nav style={{...styles.nav, textAlign: 'end'}}>
-        <a href="#about" style={styles.navLink}><i class="fa fa-behance" style={{ color: 'white', fontSize:'24px'}}></i></a>
-        <a href="#about" style={styles.navLink}><i class="fa fa-linkedin" style={{ color: 'white', fontSize:'24px'}}></i></a>
-        <a href="#about" style={styles.navLink}><i class="fa fa-instagram" style={{ color: 'white', fontSize:'24px'}}></i></a>
-        <a href="#about" style={styles.navLink}><i class="fa fa-google" style={{ color: 'white', fontSize:'24px'}}></i></a>
+        <a href="https://www.behance.net/buketyas?locale=tr_TR"
+          target='_blank' style={styles.navLink} rel="noreferrer"><i class="fa fa-behance" style={{ color: 'white', fontSize:'20px'}}>
+            </i>
+        </a>
+        <a href="https://www.linkedin.com/in/buketyas/" 
+          target='_blank' style={styles.navLink} rel="noreferrer">
+            <i class="fa fa-linkedin" style={{ color: 'white', fontSize:'20px'}}></i>
+        </a>
+        <a href="https://www.instagram.com/design.studio.by/#" 
+          target='_blank' style={styles.navLink} rel="noreferrer">
+            <i class="fa fa-instagram" style={{ color: 'white', fontSize:'20px'}}></i>
+        </a>
+        <a href="mailto:buketyas@gmail.com"
+         target='_blank' style={styles.navLink} rel="noreferrer">
+          <i class="fa fa-google" style={{ color: 'white', fontSize:'20px'}}></i>
+        </a>
       </nav>
     </header>
   );
@@ -53,14 +65,14 @@ const styles = {
   navLinkLogo: {
     color: 'rgb(255, 255, 255)',
     textDecoration: 'none',
-    fontSize: '32px',
+    fontSize: '28px',
     padding: '10px',
-    fontWeight: 600,
+    fontWeight: 500,
   },
   navLink: {
     color: 'rgb(255, 255, 255)',
     textDecoration: 'none',
-    fontSize: '24px',
+    fontSize: '22px',
     padding: '10px',
     fontWeight: 300,
   },
