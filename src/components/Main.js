@@ -1,27 +1,27 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import livingRoom1 from './pictures/livingRoom/livingRoom1.jpg';
+import livingRoom1 from '../pictures/LivingRoom/livingRoom1.jpg';
 // import livingRoom2 from './pictures/livingRoom/livingRoom2.jpg';
 // import livingRoom3 from './pictures/livingRoom/livingRoom3.jpg';
 // import livingRoom4 from './pictures/livingRoom/livingRoom4.jpg';
 
-import avlu1 from './pictures/avlu1.jpg';
-import burro1 from './pictures/burro1.png';
-import cesme1 from './pictures/cesme1.jpg';
-import cesmependik1 from './pictures/cesmependik1.jpeg';
-import fargo1 from './pictures/fargo1.jpg';
-import fargoInterior1 from './pictures/fargoInterior1.jpg';
-import habura1 from './pictures/habura1.jpg';
-import houseofdurum1 from './pictures/houseofdurum1.jpg';
-import icecream1 from './pictures/icecream1.png';
-import interior1 from './pictures/interior1.jpg';
-import muhtelif1 from './pictures/muhtelif1.jpg';
-import nevse1 from './pictures/nevse1.jpg';
-import office1 from './pictures/office1.png';
-import pendikShopping1 from './pictures/pendikShopping1.jpg';
-import social1 from './pictures/social1.jpeg';
-import villa1 from './pictures/villa1.jpg';
-import yakakoy1 from './pictures/yakakoy1.jpg';
+import avlu1 from '../pictures/Avlu/avlu1.jpg';
+import burro1 from '../pictures/Burro/burro1.png';
+import cesme1 from '../pictures/CesmeKahve/cesme1.jpg';
+import cesmependik1 from '../pictures/CesmeKahvePendik/cesmependik1.jpeg';
+import fargo1 from '../pictures/Fargo/fargo1.jpg';
+import fargoInterior1 from '../pictures/FargoInterior/fargoInterior1.jpg';
+import habura1 from '../pictures/Habura/habura1.jpg';
+import houseofdurum1 from '../pictures/HouseOfDurum/houseofdurum1.jpg';
+import icecream1 from '../pictures/IceCream/icecream1.png';
+import interior1 from '../pictures/Interior/interior1.jpg';
+import muhtelif1 from '../pictures/Muhtelif/muhtelif1.jpg';
+import nevse1 from '../pictures/Nevse/nevse1.jpg';
+import office1 from '../pictures/Office/office1.png';
+import pendikShopping1 from '../pictures/PendikShopping/pendikShopping1.jpg';
+import social1 from '../pictures/Social/social1.jpeg';
+import villa1 from '../pictures/Villa/villa1.jpg';
+import yakakoy1 from '../pictures/Yakakoy/yakakoy1.jpg';
 
 import { Col, Row } from 'antd';
 

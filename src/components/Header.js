@@ -1,16 +1,15 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header style={styles.header}>
       <nav style={styles.nav}>
-        <a href="#about" style={styles.navLink}>About</a>
-        <a href="#portfolio" style={styles.navLink}>Portfolio</a>
-        <a href="#contact" style={styles.navLink}>Contact</a>
+        <Link to="/about" style={styles.navLink}>About</Link>
+        <Link to="/portfolio" style={styles.navLink}>Portfolio</Link>
       </nav>
       <div style={styles.logoWrap}>
-        <a href="#" style={styles.navLinkLogo}>WELCOME</a>
+        <Link to="/" style={styles.navLinkLogo}>WELCOME</Link>
       </div>
       <nav style={{...styles.nav, textAlign: 'end'}}>
         <a href="https://www.behance.net/buketyas?locale=tr_TR"
