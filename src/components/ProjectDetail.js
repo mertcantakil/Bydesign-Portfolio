@@ -1,5 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 // Living Room resimleri
 import livingRoom1 from '../pictures/living-room/lr-1.jpg';
 import livingRoom2 from '../pictures/living-room/lr-2.jpg';
@@ -246,7 +248,12 @@ const ProjectDetail = () => {
       </div>
       <div className="project-images">
         {project.images.map((image, index) => (
-          <img key={index} src={image} alt={`${project.title} ${index + 1}`} />
+          <LazyLoadImage
+            key={index}
+            src={image}
+            effect="blur"
+            alt={`${project.title} ${index + 1}`}
+          />
         ))}
       </div>
     </div>

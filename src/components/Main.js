@@ -17,6 +17,8 @@ import villa1 from '../pictures/villa/vl-1.jpg';
 import yakakoy1 from '../pictures/yakakoy/yk-1.jpg';
 
 import { Col, Row } from 'antd';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Main = () => {
   const navigate = useNavigate();
@@ -122,7 +124,12 @@ const Main = () => {
               onClick={() => handleProjectClick(project.id)}
               style={{ cursor: 'pointer' }}
             >
-              <img src={project.image} className="image" />
+              <LazyLoadImage
+                src={project.image}
+                effect="blur"
+                className="image"
+                alt={project.title}
+              />
               <div className="overlay">
                 <span className="text">{project.title}</span>
                 <span className="description">{project.description}</span>
