@@ -1,56 +1,135 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import livingRoom1 from '../pictures/LivingRoom/livingRoom1.jpg';
-// import livingRoom2 from './pictures/livingRoom/livingRoom2.jpg';
-// import livingRoom3 from './pictures/livingRoom/livingRoom3.jpg';
-// import livingRoom4 from './pictures/livingRoom/livingRoom4.jpg';
-
-import avlu1 from '../pictures/Avlu/avlu1.jpg';
-import burro1 from '../pictures/Burro/burro1.png';
-import cesme1 from '../pictures/CesmeKahve/cesme1.jpg';
-import cesmependik1 from '../pictures/CesmeKahvePendik/cesmependik1.jpeg';
-import fargo1 from '../pictures/Fargo/fargo1.jpg';
-import fargoInterior1 from '../pictures/FargoInterior/fargoInterior1.jpg';
-import habura1 from '../pictures/Habura/habura1.jpg';
-import houseofdurum1 from '../pictures/HouseOfDurum/houseofdurum1.jpg';
-import icecream1 from '../pictures/IceCream/icecream1.png';
-import interior1 from '../pictures/Interior/interior1.jpg';
-import muhtelif1 from '../pictures/Muhtelif/muhtelif1.jpg';
-import nevse1 from '../pictures/Nevse/nevse1.jpg';
-import office1 from '../pictures/Office/office1.png';
-import pendikShopping1 from '../pictures/PendikShopping/pendikShopping1.jpg';
-import social1 from '../pictures/Social/social1.jpeg';
-import villa1 from '../pictures/Villa/villa1.jpg';
-import yakakoy1 from '../pictures/Yakakoy/yakakoy1.jpg';
+import { useNavigate } from 'react-router-dom';
+import livingRoom1 from '../pictures/living-room/lr-1.jpg';
+import avlu1 from '../pictures/avlu/a-1.jpg';
+import cesme1 from '../pictures/cesme-kahve-gaziantep/ckg-1.jpg';
+import cesmependik1 from '../pictures/cesme-kahve-pendik/ckp-1.jpeg';
+import fargo1 from '../pictures/fargo/fr-1.jpg';
+import fargoInterior1 from '../pictures/fargo-interior/fri-1.jpg';
+import houseofdurum1 from '../pictures/house-of-durum/h-1.jpg';
+import icecream1 from '../pictures/icecream/i-1.png';
+import muhtelif1 from '../pictures/muhtelif/m-1.jpg';
+import nevse1 from '../pictures/nevse/n-1.jpg';
+import office1 from '../pictures/office/o-1.png';
+import social1 from '../pictures/social/s-1.jpeg';
+import villa1 from '../pictures/villa/vl-1.jpg';
+import yakakoy1 from '../pictures/yakakoy/yk-1.jpg';
 
 import { Col, Row } from 'antd';
 
 const Main = () => {
+  const navigate = useNavigate();
 
-  const mainPictures = [
-    livingRoom1, avlu1,burro1,cesme1,cesmependik1,
-    fargo1,fargoInterior1,habura1,houseofdurum1,
-    icecream1,interior1,muhtelif1,nevse1,office1,
-    pendikShopping1,social1,villa1,yakakoy1
+  const projects = [
+    { 
+      id: 'livingRoom',
+      image: livingRoom1,
+      title: "Living Room",
+      description: "İç Mekan Tasarımı"
+    },
+    { 
+      id: 'avlu',
+      image: avlu1,
+      title: "Avlu",
+      description: "Dış Mekan Tasarımı"
+    },
+    { 
+      id: 'cesme1',
+      image: cesme1,
+      title: "Cesme Kahve",
+      description: "Gaziantep"
+    },
+    { 
+      id: 'cesmependik1',
+      image: cesmependik1,
+      title: "Cesme Kahve",
+      description: "Pendik"
+    },
+    { 
+      id: 'fargo1',
+      image: fargo1,
+      title: "Fargo",
+      description: "Fransız Restoran"
+    },
+    { 
+      id: 'fargoInterior1',
+      image: fargoInterior1,
+      title: "Fargo",
+      description: "İç Mekan"
+    },
+    { 
+      id: 'houseofdurum1',
+      image: houseofdurum1,
+      title: "House of Durum",
+      description: "Kebapçılık"
+    },
+    { 
+      id: 'icecream1',
+      image: icecream1,
+      title: "Ice Cream",
+      description: "Dondurma"
+    },
+    { 
+      id: 'muhtelif1',
+      image: muhtelif1,
+      title: "Muhtelif",
+      description: "İçecek"
+    },
+    { 
+      id: 'nevse1',
+      image: nevse1,
+      title: "Nevşe",
+      description: "Kebapçılık"
+    },
+    { 
+      id: 'office1',
+      image: office1,
+      title: "Office",
+      description: "Ofis"
+    },
+    { 
+      id: 'social1',
+      image: social1,
+      title: "Social",
+      description: "Sosyal"
+    },
+    { 
+      id: 'villa1',
+      image: villa1,
+      title: "Villa",
+      description: "Villa"
+    },
+    { 
+      id: 'yakakoy1',
+      image: yakakoy1,
+      title: "Yakakoy",
+      description: "Yakakoy"
+    },
   ];
 
-  const livingRoomText = "Living Room Furniture Interior Design";
+  const handleProjectClick = (projectId) => {
+    navigate(`/project/${projectId}`);
+  };
 
   return (
     <main>
       <Row style={styles.dFlexCenter}>
-        {
-          mainPictures.map(pictures => (
-            <Col span={12}>
-               <div className="image-container">
-                <img src={pictures} className="image" />
-                <div className="overlay">
-                  <span className="text">{livingRoomText}</span>
-                </div>
+        {projects.map((project, index) => (
+          <Col span={12} key={index}>
+            <div 
+              className="image-container" 
+              onClick={() => handleProjectClick(project.id)}
+              style={{ cursor: 'pointer' }}
+            >
+              <img src={project.image} className="image" />
+              <div className="overlay">
+                <span className="text">{project.title}</span>
+                <span className="description">{project.description}</span>
               </div>
-            </Col>
-          ))
-        }
+            </div>
+          </Col>
+        ))}
       </Row>
     </main>
   );
