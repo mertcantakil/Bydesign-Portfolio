@@ -238,21 +238,31 @@ const ProjectDetail = () => {
   return (
     <div className="project-detail">
       <div className="project-info">
-        <h1>{project.title}</h1>
-        <div className="project-metadata">
+        <h1 style={{ 
+          fontSize: window.innerWidth <= 768 ? '2em' : '2.5em' 
+        }}>{project.title}</h1>
+        <div className="project-metadata" style={{
+          padding: window.innerWidth <= 768 ? '0 15px' : '0'
+        }}>
           <p><strong>Proje:</strong> {project.title}</p>
           <p><strong>Konum:</strong> {project.location}</p>
           <p><strong>Yıl:</strong> {project.year}</p>
           <p><strong>İş:</strong> {project.description}</p>
         </div>
       </div>
-      <div className="project-images">
+      <div className="project-images" style={{
+        padding: window.innerWidth <= 768 ? '0 10px' : '0'
+      }}>
         {project.images.map((image, index) => (
           <LazyLoadImage
             key={index}
             src={image}
             effect="blur"
             alt={`${project.title} ${index + 1}`}
+            style={{
+              width: '100%',
+              maxWidth: window.innerWidth <= 768 ? '100%' : '800px'
+            }}
           />
         ))}
       </div>

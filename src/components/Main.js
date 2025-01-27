@@ -118,11 +118,16 @@ const Main = () => {
     <main>
       <Row style={styles.dFlexCenter}>
         {projects.map((project, index) => (
-          <Col span={12} key={index}>
+          <Col 
+            xs={24}  // Mobilde tam genişlik
+            sm={24}  // Küçük tabletlerde tam genişlik
+            md={12}  // Büyük tablet ve desktop'ta iki kolon
+            key={index}
+          >
             <div 
               className="image-container" 
               onClick={() => handleProjectClick(project.id)}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: 'pointer', margin: '10px 0' }}
             >
               <LazyLoadImage
                 src={project.image}

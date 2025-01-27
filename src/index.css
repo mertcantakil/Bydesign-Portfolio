@@ -137,19 +137,50 @@ body {
 }
 
 @media (max-width: 768px) {
+  .image-container {
+    aspect-ratio: 3/2;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .project-detail {
+    padding: 20px 10px;
+  }
+
   .project-info h1 {
     font-size: 2em;
   }
-  
+
   .project-metadata {
-    padding: 0 20px;
+    padding: 0 15px;
   }
-  
-  .project-detail {
-    padding: 20px;
-  }
-  
+
   .project-images {
-    max-width: 100%;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .project-images img {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .project-info h1 {
+    font-size: 1.8em;
   }
 } 

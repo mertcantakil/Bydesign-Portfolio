@@ -4,13 +4,48 @@ import { Row, Col } from "antd";
 
 const About = () => {
     return (
-        <Row style={{ marginBottom: '3rem'}}>
-            <Col span={10} style={{ display:'flex', justifyContent: 'center'}}>
-                <img src={profilPic} alt="profil" width={700} height={700}></img>
+        <Row style={{ marginBottom: '3rem' }}>
+            <Col 
+                xs={24}
+                md={10} 
+                style={{ 
+                    display: 'flex', 
+                    justifyContent: 'center',
+                    marginBottom: { xs: '2rem', md: '0' }
+                }}
+            >
+                <img 
+                    src={profilPic} 
+                    alt="profil" 
+                    style={{
+                        width: '100%',
+                        maxWidth: '700px',
+                        height: 'auto',
+                        objectFit: 'cover',
+                        padding: { xs: '0 1rem', md: '0' }
+                    }}
+                />
             </Col>
-            <Col span={14} style={{ fontSize: '1rem'}}>
-                <h2 style={{ paddingLeft: '2rem', textAlign: 'start'}}>About Me</h2>
-                <p style={{ padding: '2rem', textAlign: 'start', lineHeight: '1.6rem'}}>
+            <Col 
+                xs={24}
+                md={14} 
+                style={{ 
+                    fontSize: '1rem',
+                    padding: { xs: '0 1rem', md: '0' }
+                }}
+            >
+                <h2 style={{ 
+                    paddingLeft: '2rem', 
+                    textAlign: 'start',
+                    fontSize: { xs: '1.8rem', md: '2rem' }
+                }}>
+                    About Me
+                </h2>
+                <p style={{ 
+                    padding: '2rem', 
+                    textAlign: 'start', 
+                    lineHeight: '1.6rem'
+                }}>
                     As a master architect, I completed my bachelor's degree in 2020 at the Department of Architecture, Eskişehir Osmangazi University,
                     graduating with a second degree in my class with high honors. I obtained my master's degree in 2024 from the Graduate School of
                     Natural and Applied Sciences, Department of Architecture, Building Science Program, at Dokuz Eylül University, with a thesis.
@@ -34,7 +69,7 @@ const About = () => {
                 </p>
             </Col>
         </Row>
-    )
+    );
 };
 
 export default About;
